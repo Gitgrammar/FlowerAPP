@@ -8,7 +8,8 @@ public static void main(String[] args) {
     System.out.print("タネをいくつ植えますか>>");
     int kinds=sc.nextInt();
     int water=0;
-   while(true){
+    boolean flag=true;
+   while(flag==true){
      System.out.print("何をしますか？1…水汲み2…水撒き3…花壇を見る4…終了>>");
 
    int select=sc.nextInt();
@@ -27,10 +28,30 @@ public static void main(String[] args) {
             break;
         }
         System.out.println("水を播きました");
+        break;
        
         
     }
+    case 3:
+    {
+        if(water>3){
+            System.out.printf("立派な%sの色の花が咲きました。\n",color);
+        }
+        else{
+            System.out.println("まだ花が咲くには水が足りません。");
+            break;
+        }
+    }
+    case 4:{
+        System.out.println("アプリケーションを終了します。");
+        flag=false;
+        break;
+        
+    }
+  
+    
    }
+  
 }
 }    
 }
