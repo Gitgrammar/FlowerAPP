@@ -10,25 +10,34 @@ public class Flowerbed {
     int bloom;
     int water;
 
-    public Flowerbed(String color,int seedNum){
+    public Flowerbed(String color,int seedNum,int bloom,int water){
         this.color=color;
         this.seedNum=seedNum;
         this.bloom=bloom;
+        this.water=0;
     }
-    void fillWater(){
-        int water=0;
-        if (water==0){
-            System.out.println("水がありません。");
 
+    void fillWater(){
+        
+        if (water==0){
+          System.out.println("水がありません。");
+
+        }else if(water>4)
+        {
+        System.out.println("もう水はくめません。");
         }
-        else {
-        water++;
-        System.out.println(water+"杯水をくみました。");
+        else{
+            water++;
+            System.out.println(water+"杯水をくみました。");
+
         }
     }
     void water(){
-        int sprinkle=0;
-        sprinkle++;
-        System.out.println(sprinkle+"水を播きました");
+        if( water==0){
+            System.out.println("水が空っぽです。");}
+        else{   
+        water--;
+        System.out.println(water+"水を播きました");
+        }
     }
 }

@@ -7,6 +7,8 @@ public static void main(String[] args) {
     String color=sc.next();
     System.out.print("タネをいくつ植えますか>>");
     int kinds=sc.nextInt();
+    Flowerbed fb=new Flowerbed(color, kinds, kinds, kinds);
+
     int water=0;
     boolean flag=true;
    while(flag==true){
@@ -17,19 +19,12 @@ public static void main(String[] args) {
    switch(select){
     case 1:
     {
-       
-        System.out.println(water+"杯水を組みました");
-        water++;
+        fb.fillWater();
+        
     }
     case 2:
     {
-        if( water==0){
-            System.out.println("水が空っぽです。");
-            break;
-        }
-        System.out.println("水を播きました");
-        break;
-       
+      fb.water();
         
     }
     case 3:
