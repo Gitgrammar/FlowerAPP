@@ -20,11 +20,13 @@ public static void main(String[] args) {
     case 1:
     {
         fb.fillWater();
+        break;
         
     }
     case 2:
     {
       fb.water();
+      break;
         
     }
     case 3:
