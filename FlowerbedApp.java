@@ -31,13 +31,8 @@ public static void main(String[] args) {
     }
     case 3:
     {
-        if(water>3){
-            System.out.printf("立派な%sの色の花が咲きました。\n",color);
-        }
-        else{
-            System.out.println("まだ花が咲くには水が足りません。");
-            break;
-        }
+      fb.observe(); 
+      break;
     }
     case 4:{
         System.out.println("アプリケーションを終了します。");
