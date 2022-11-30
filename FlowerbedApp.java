@@ -7,8 +7,7 @@ public static void main(String[] args) {
     String color=sc.next();
     System.out.print("タネをいくつ植えますか>>");
     int kinds=sc.nextInt();
-    Flowerbed fb=new Flowerbed(color, kinds, kinds, kinds);
-
+    Flowerbed fb=new Flowerbed(color, kinds, kinds, kinds, kinds);
     int water=0;
     boolean flag=true;
    while(flag==true){

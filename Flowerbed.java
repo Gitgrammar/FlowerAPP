@@ -9,34 +9,36 @@ public class Flowerbed {
     int seedNum;
     int bloom;
     int water;
+    int count;
 
-    public Flowerbed(String color,int seedNum,int bloom,int water){
+    public Flowerbed(String color,int seedNum,int bloom,int water,int count){
         this.color=color;
         this.seedNum=seedNum;
         this.bloom=bloom;
         this.water=0;
+        this.count=0;
     }
 
     void fillWater(){
        
-        water++;
+        this.water++;
         System.out.println(water+"杯水をくみました。");
         
-        if(water>4)
+        if(this.water>4)
            System.out.println("もう水を組めません。");
 
         }
     
     void water(){
-        if( water==0){
+        if( this.water==0){
             System.out.println("水が空っぽです。");}
         else{   
-        water--;
+        this.count++;
         System.out.println(water+"杯水を播きました");
         }
     }
     void observe(){
-        if(water>3){
+        if(this.count>3){
             System.out.printf("立派な%sの色の花が咲きました。\n",color);
         }
         else{
