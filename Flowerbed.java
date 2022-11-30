@@ -39,11 +39,15 @@ public class Flowerbed {
     }
     void observe(){
         if(this.count>3){
-            System.out.printf("立派な%sの色の花が咲きました。\n",color);
+            System.out.printf("花の色は%s\n",color);
+            for(int i=0;i<this.count;i++){
+                System.out.print("*");
+            }
         }
         else{
             System.out.println("まだ花が咲くには水が足りません。");
             
         }
+        System.out.println();
     }
 }
